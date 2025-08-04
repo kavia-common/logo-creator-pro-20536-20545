@@ -1,0 +1,207 @@
+.dashboard-wrapper {
+  margin-left: var(--sidebar-width);
+  margin-top: var(--header-height);
+  padding: 32px;
+  min-height: 100vh;
+  background: var(--main-bg);
+}
+
+.page-header .title {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  color: var(--accent-green);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.page-header .subtitle {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.summary-cards {
+  display: flex;
+  gap: 24px;
+  margin-top: 28px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.summary-card {
+  background: var(--card-bg);
+  box-shadow: var(--shadow-card);
+  border-radius: var(--card-radius);
+  border-left: 4px solid var(--accent-green);
+  padding: var(--card-padding);
+  min-width: 220px;
+  flex: 1 1 210px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.card-value {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--accent-green);
+  margin-bottom: 4px;
+}
+.card-label {
+  font-size: 16px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.filters-bar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 22px;
+  margin-bottom: 0;
+}
+.search-input {
+  flex: 3 1 220px;
+  padding: 12px 18px;
+  border-radius: 6px;
+  border: 1px solid #e6eaf1;
+  font-size: 15px;
+  outline: none;
+  transition: border var(--transition-fast);
+}
+.search-input:focus {
+  border-color: var(--primary-blue);
+}
+.type-select {
+  flex: 1 1 140px;
+  padding: 12px 18px;
+  border-radius: 6px;
+  border: 1px solid #e6eaf1;
+  background: #fff;
+  color: var(--text-main);
+  font-size: 15px;
+  outline: none;
+  transition: border var(--transition-fast);
+}
+.type-select:focus {
+  border-color: var(--primary-blue);
+}
+.create-btn {
+  background: var(--button-green);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: auto;
+  box-shadow: 0 2px 7px #1fc18722;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+.create-btn:hover {
+  background: #15a77c;
+}
+.create-btn:active {
+  transform: scale(0.98);
+}
+
+.table-card {
+  width: 100%;
+  margin-top: 24px;
+  border-radius: var(--table-radius);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-card);
+  padding: 0;
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+  min-width: 700px;
+}
+th, td {
+  padding: 14px 16px;
+  text-align: left;
+}
+th {
+  background: #f6f8fc;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+tr {
+  transition: background var(--transition-fast);
+}
+tbody tr:hover {
+  background: #f2f8fe;
+}
+.status-active {
+  color: var(--accent-green);
+  font-weight: 600;
+}
+.status-inactive {
+  color: var(--text-muted);
+}
+.actions {
+  text-align: right;
+  min-width: 96px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  color: var(--icon-gray);
+  font-size: 20px;
+  margin-left: 2px;
+  outline: none;
+  vertical-align: middle;
+}
+.icon-btn:active {
+  transform: scale(0.97);
+}
+.icon-btn.edit:hover .material-icons {
+  color: var(--primary-blue);
+}
+.icon-btn.delete:hover .material-icons {
+  color: #e53935;
+}
+.icon-btn:hover {
+  background: #e7f1fb;
+}
+.material-icons {
+  font-size: 22px !important;
+}
+
+@media (max-width: 1100px) {
+  .summary-cards {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+@media (max-width: 800px) {
+  .dashboard-wrapper {
+    padding: 12px;
+    margin-left: 70px;
+  }
+  .sidebar {
+    width: 62px;
+    min-width: 62px;
+    padding-top: 12px;
+  }
+  .app-title, .nav-text {
+    display: none;
+  }
+  .nav-item { justify-content: center; padding: 10px 0; }
+}
+@media (max-width: 600px) {
+  .dashboard-wrapper {
+    margin-left: 0;
+    margin-top: 50px;
+    padding: 6px;
+  }
+  .header-bar { height: 49px; padding: 0 6px; }
+}

@@ -1,0 +1,20 @@
+:root {
+  --primary-blue: #3481f6;
+  --header-bg: #2563eb;
+  --sidebar-bg: #f8fafc;
+  --main-bg: #f6f8fc;
+  --card-bg: #ffffff;
+  --accent-green: #1fc187;
+  --button-green: #18c092;
+  --text-main: #212121;
+  --text-muted: #94a3b8;
+  --icon-gray: #b0b6be;
+
+  --header-height: 60px;
+  --sidebar-width: 220px;
+  --card-radius: 10px;
+  --table-radius: 12px;
+  --card-padding: 18px 24px;
+  --transition-fast: 0.16s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-card: 0 1px 6px #c3d1dd24;
+}

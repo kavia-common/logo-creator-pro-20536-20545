@@ -1,0 +1,54 @@
+<main class="dashboard-wrapper">
+  <section class="page-header">
+    <div class="title">Profile Management</div>
+    <div class="subtitle">Manage and monitor your device profiles.</div>
+  </section>
+
+  <section class="summary-cards">
+    <div class="summary-card" *ngFor="let card of summaryCards">
+      <div class="card-value">{{card.value}}</div>
+      <div class="card-label">{{card.label}}</div>
+    </div>
+  </section>
+
+  <section class="filters-bar">
+    <input class="search-input" type="search" placeholder="Search profiles..." />
+    <select class="type-select">
+      <option value="">All Types</option>
+      <option value="Standard">Standard</option>
+      <option value="Premium">Premium</option>
+    </select>
+    <button class="create-btn">Create Profile</button>
+  </section>
+
+  <section class="table-card">
+    <table>
+      <thead>
+        <tr>
+          <th>Profile</th>
+          <th>Type</th>
+          <th>Status</th>
+          <th>Date</th>
+          <th>Created</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of tableRows">
+          <td>{{row.profile}}</td>
+          <td>{{row.type}}</td>
+          <td>
+            <span [class.status-active]="row.status==='Active'"
+                  [class.status-inactive]="row.status!=='Active'">{{row.status}}</span>
+          </td>
+          <td>{{row.date}}</td>
+          <td>{{row.created}}</td>
+          <td class="actions">
+            <button class="icon-btn edit" title="Edit"><span class="material-icons">edit</span></button>
+            <button class="icon-btn delete" title="Delete"><span class="material-icons">delete</span></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
