@@ -1,0 +1,4 @@
+{
+    "command": "npm run test",
+    "working_directory": "/home/kavia/workspace/code-generation/logo-creator-pro-20536-20545/logo_generator_frontend"
+}
